@@ -25,13 +25,15 @@ int main() {
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
+    float densidade1, densidade2;
+    float pibcapital1, pibcapital2;
 
     printf("Cadastro das Cartas do Super Trunfo\n\n");
 
     printf("------------ Carta1 ------------\n\n");
 
     printf("Digite uma letra do 'A' a 'H', Representara o Estado:\n");
-    scanf("%c", &estado1);
+    scanf(" %c", &estado1);
 
     printf("Digite a Letra do Estado, Seguida de um Numero de 01 a 04:\n");
     scanf("%s", &codigo1);
@@ -51,6 +53,9 @@ int main() {
     printf("Digite a Quantidade de Pontos Turístico:\n");
     scanf("%d", &pontos1);
 
+    densidade1 = (float) populacao1 / area1;
+    pibcapital1 = (float) populacao1 / pib1;
+
     printf("\n---------- Informações da Sua Carta 1----------\n\n");
 
     printf("Estado: %c\n", estado1);
@@ -59,12 +64,14 @@ int main() {
     printf("Área: %f\n", area1);
     printf("Pib: %f\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos1);
+    printf("Dencidade Populacional: %f\n", densidade1);
+    printf("Pib per Capital: %f\n\n", pibcapital1);
 
+    // CARTA 2 ---------------------------------------------------------------
     printf("------------ Carta2 ------------\n\n");
-    setbuf(stdin,NULL);
 
     printf("Digite uma letra do 'A' a 'H', Representara o Estado:\n");
-    scanf("%c", &estado2);
+    scanf(" %c", &estado2);
 
     printf("Digite a Letra do Estado, Seguida de um NÚmero de 01 a 04:\n");
     scanf("%s", &codigo2);
@@ -84,6 +91,9 @@ int main() {
     printf("Digite a Quantidade de Pontos Turístico:\n");
     scanf("%d", &pontos2);
 
+    densidade2 = (float) populacao2 / area2;
+    pibcapital2 = (float) populacao2 / pib2;
+
     printf("\n---------- Informações da Sua Carta 2----------\n\n");
 
     printf("Estado: %c\n", estado2);
@@ -92,6 +102,9 @@ int main() {
     printf("Área: %f\n", area2);
     printf("Pib: %f\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontos2);
+    printf("Dencidade Populacional: %f\n", densidade2);
+    printf("Pib per Capital: %f\n", pibcapital2);
+
 
     return 0;
 }
