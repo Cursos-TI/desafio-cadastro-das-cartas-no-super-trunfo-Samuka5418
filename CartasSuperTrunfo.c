@@ -1,27 +1,12 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+int main()
+ {
     
     char estado1, estado2;
-    char codigo1 [4], codigo2 [4];
+    char codigo1[4], codigo2 [4];s
     char cidade1 [20], cidade2 [20];
-    int populacao1, populacao2;
+    unsigned int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int pontos1, pontos2;
@@ -36,13 +21,13 @@ int main() {
     scanf(" %c", &estado1);
 
     printf("Digite a Letra do Estado, Seguida de um Numero de 01 a 04:\n");
-    scanf("%s", &codigo1);
+    scanf(" %3s", codigo1);
 
     printf("Digite o Nome da cidade:\n");
-    scanf("%s", &cidade1);
+    scanf(" %s", &cidade1);
 
     printf("Digite a População:\n");
-    scanf("%d", &populacao1);
+    scanf("%u", &populacao1);
 
     printf("Digite a Área:\n");
     scanf("%f", &area1);
@@ -60,7 +45,7 @@ int main() {
 
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
-    printf("População: %d\n", populacao1);
+    printf("População: %u\n", populacao1);
     printf("Área: %f\n", area1);
     printf("Pib: %f\n", pib1);
     printf("Número de Pontos Turísticos: %d\n", pontos1);
@@ -73,14 +58,18 @@ int main() {
     printf("Digite uma letra do 'A' a 'H', Representara o Estado:\n");
     scanf(" %c", &estado2);
 
+    setbuf(stdin,NULL);
+
     printf("Digite a Letra do Estado, Seguida de um NÚmero de 01 a 04:\n");
-    scanf("%s", &codigo2);
+    scanf("%c", &codigo2);
+    
+    setbuf(stdin,NULL);
 
     printf("Digite o Nome da cidade:\n");
     scanf("%s", &cidade2);
 
     printf("Digite a População:\n");
-    scanf("%d", &populacao2);
+    scanf("%u", &populacao2);
 
     printf("Digite a Área:\n");
     scanf("%f", &area2);
@@ -98,13 +87,32 @@ int main() {
 
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
-    printf("População: %d\n", populacao2);
+    printf("População: %u\n", populacao2);
     printf("Área: %f\n", area2);
     printf("Pib: %f\n", pib2);
     printf("Número de Pontos Turísticos: %d\n", pontos2);
     printf("Dencidade Populacional: %f\n", densidade2);
     printf("Pib per Capital: %f\n", pibcapital2);
 
+    float densidadeEcapital1;
+    float densidadeEcapital2;
+
+    densidadeEcapital1 = densidade1 + pibcapital1;
+    densidadeEcapital2 = densidade2 + pibcapital2;
+
+    float superpoder1;
+    float superpoder2;
+
+    superpoder1 = (float) (populacao1 + area1 + pib1 + pontos1 + pibcapital1) - densidade1;
+    superpoder2 = (float) (populacao2 + area2 + pib2 + pontos2 + pibcapital2) - densidade2;
+
+    printf("\nComparacao entre as cartas:\n");
+
+    int resupopulacao, resuarea, resupib, resupontos, resudensidade, resulpibper, resulsuperpoder;
+
+    resupopulacao = populacao1 > populacao2;
+
+    printf("%d",resupopulacao);
 
     return 0;
 }
