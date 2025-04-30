@@ -104,25 +104,28 @@ int main()
     superpoder1 = (float) (populacao1 + area1 + pib1 + pontos1 + pibcapital1) - densidade1;
     superpoder2 = (float) (populacao2 + area2 + pib2 + pontos2 + pibcapital2) - densidade2;
 
-    printf("\nComparacao entre as cartas:\n");
+    printf("\n---------- Comparacao entre as cartas ----------\n");
 
-    int resupopulacao, resuarea, resupib, resupontos, resudensidade, resulpibper, resulsuperpoder;
-
-    resupopulacao = populacao1 > populacao2;
-    resuarea = area1 > area2;
-    resupib = pib1 > pib2;
-    resupontos = pontos1 > pontos2;
-    resudensidade = densidade1 > densidade2;
-    resulpibper = pibcapital1 > pibcapital2;
-    resulsuperpoder = superpoder1 > superpoder2;
+    printf("Populaçao:\n");
+    printf("Carta 1: %.2f X Carta 2: %.2f\n",(float) populacao1,(float)populacao2);
+    if ((float)populacao1 > (float)populacao2)
+         printf("Carta 1 Venceu!!\n\n");
+    else
+        printf("Carta 2 Venceu!!\n\n");
     
-    printf("\nResultado Populacao:%d\n",resupopulacao);
-    printf("\nResultado Area:%d\n",resuarea);
-    printf("\nResultado PiB:%d\n",resupib);
-    printf("\nResultado Pontos turisticos:%d\n",resupontos);
-    printf("\nResultado Densidade:%d\n",resudensidade);
-    printf("\nResultado PiB Capital:%d\n",resulpibper);
-    printf("\nResultado Supor poder:%d\n",resulsuperpoder);
+    printf("Área:\n");
+    printf("Carta 1: %.2f X Carta 2: %.2f\n", area1, area2);
+    if (area1 > area2)
+        printf("Carta 1 Venceu!!\n\n");
+    else
+        printf("Carta 2 Venceu!!\n\n");
+
+    printf("Densidade Populacional::\n");
+    printf("Carta 1: %f X Carta 2: %f\n", densidade1, densidade2);
+    if (densidade1 > densidade2)
+         printf("Carta 2 Venceu!!\n\n");
+    else
+        printf("Carta 1 Venceu!!\n\n");
 
     return 0;
 }
