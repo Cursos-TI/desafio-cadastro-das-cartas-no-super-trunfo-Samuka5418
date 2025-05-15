@@ -106,26 +106,32 @@ int main()
 
     printf("\n---------- Comparacao entre as cartas ----------\n");
 
-    printf("Populaçao:\n");
-    printf("Carta 1: %.2f X Carta 2: %.2f\n",(float) populacao1,(float)populacao2);
-    if ((float)populacao1 > (float)populacao2)
-         printf("Carta 1 Venceu!!\n\n");
-    else
-        printf("Carta 2 Venceu!!\n\n");
+    char escolha1, escolha2;
+
+    printf("Escolha dois Atributos Diferentes\n\n");
     
-    printf("Área:\n");
-    printf("Carta 1: %.2f X Carta 2: %.2f\n", area1, area2);
-    if (area1 > area2)
-        printf("Carta 1 Venceu!!\n\n");
-    else
-        printf("Carta 2 Venceu!!\n\n");
+    printf("1. Area\n");
+    printf("2. Populacao\n");
+    printf("3. Pib\n");
+    printf("4. Densidade\n");
+    printf("5. Pontos Turisticos\n");
 
-    printf("Densidade Populacional::\n");
-    printf("Carta 1: %f X Carta 2: %f\n", densidade1, densidade2);
-    if (densidade1 > densidade2)
-         printf("Carta 2 Venceu!!\n\n");
-    else
-        printf("Carta 1 Venceu!!\n\n");
+    printf("\nEscolha o Primeiro Atributo: ");
+    scanf(" %c", &escolha1);
+    
+    printf("Sua escolha foi: %c", escolha1);
 
-    return 0;
+    printf("Escolha o Segundo Atributo: ");
+    scanf(" %c", &escolha2);
+
+    printf("Sua escolha foi: %c", escolha2);
+
+
+
+    switch (escolha1){
+        case 1:
+
+    }
+    
+    
 }
